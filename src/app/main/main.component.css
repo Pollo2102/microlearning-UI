@@ -1,0 +1,9 @@
+.toolbar-style{
+    height: 0.5rem;
+}
+
+.background-color {
+    background-color: 'secondary';
+    height: '100%';
+    position: fixed;
+}

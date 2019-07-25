@@ -1,0 +1,2 @@
+#!/bin/bash
+ng build --prod && aws s3 sync dist/microlearning-ui s3://microlearning-ui-bucket

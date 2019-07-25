@@ -1,0 +1,16 @@
+artifacts: 
+  base-directory: dist*
+  discard-paths: true
+  files: 
+    - "**/*"
+phases: 
+  build: 
+    commands: 
+      - "ng build --prod"
+  install: 
+    commands: 
+      - "npm install"
+      - "npm install -g @angular/cli"
+    runtime-versions: 
+      nodejs: 10
+version: 0.2
