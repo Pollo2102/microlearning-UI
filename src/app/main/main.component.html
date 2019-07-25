@@ -1,13 +1,20 @@
-<div [ngStyle]="{'height': '100%', 'width': '100%' , 'position': 'fixed'}">
+<div>
     
     <mat-toolbar class="toolbar-style" color="primary">
-        <mat-toolbar-row>
+        <mat-toolbar-row class="align-content">
             <span><mat-icon>info</mat-icon> Microlearning</span>
         </mat-toolbar-row>
     </mat-toolbar>
-    <div> 
-        <mat-card class='background-color'>
+     <div>
+         <mat-card class="background-color-style">
+            <mat-card class="form-style">
+                <mat-tab-group class="inner-form">
+                    <mat-tab class="form-content" label="Subscribe"> Content 1 </mat-tab>
+                    <mat-tab label="Modify Subscription"> Content 2  </mat-tab>
+                    <mat-tab label="Unsubscribe"> Content 3 </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+         </mat-card>
+     </div>
 
-        </mat-card>
-    </div>
 </div>

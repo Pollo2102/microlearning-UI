@@ -1,9 +1,32 @@
 .toolbar-style{
-    height: 0.5rem;
+    height: 1em;
+    margin: 0;
+    padding-left: 43%;
 }
 
-.background-color {
-    background-color: 'secondary';
-    height: '100%';
+.background-color-style {
+    background-color: #676565;
+    height: 100%;
+    width: 100%;
     position: fixed;
+    padding: 8% 25%;
+}
+
+.form-style{
+    box-shadow: -4px 4px 0.4em;
+    background-color: rgb(5, 130, 189);
+    margin: 17% 0%;
+    position: fixed;
+    width: 50%;
+    height: 50%;
+}
+
+.inner-form{
+    background-color: rgb(5, 130, 189);
+    height: 100%;;
+}
+
+.form-content{
+    background-color: aqua;
+    color: aqua;
 }
