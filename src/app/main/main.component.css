@@ -1,9 +1,78 @@
 .toolbar-style{
-    height: 0.5rem;
+    height: 1em;
+    margin: 0;
+    padding-left: 43%;
 }
 
-.background-color {
-    background-color: 'secondary';
-    height: '100%';
+.background-color-style {
+    background-color: #676565;
+    height: 100%;
+    width: 100%;
     position: fixed;
+    padding: 5% 20% 23% 20%;
+}
+
+.form-style{
+    box-shadow: -4px 4px 0.4em;
+    background-color: rgb(5, 130, 189);
+    margin: 17% 0%;
+    position: fixed;
+    width: 60%;
+    height: 60%;
+}
+
+.inner-form{
+    background-color: rgb(5, 130, 189);
+    height: 100%;;
+}
+
+.form-content{
+    background-color: aqua;
+    color: aqua;
+}
+
+.long-form-field {
+    text-align: left;
+    margin: 0px 20px 0px 40px;
+    width: 13em;
+}
+
+.checkbox{
+    color: darkorange   ;
+    background-color: purple;
+    border-radius: 5px;
+    padding: 3px 6px 3px 6px;
+    margin: 10px 0px;
+}
+
+.p1{
+    padding-top: 5%;
+    float: left; 
+}
+
+.p2{
+    padding-top: 5%;
+    float: right;
+    margin-right: 2em;
+    margin-top: 2em;
+}
+
+.p3{
+    padding: 6% 20%;
+}
+
+.ng-invalid:not(form) {
+    text-emphasis-color: red;
+}
+
+.button-style{
+    color: chartreuse;
+    background-color: purple;
+    margin: 10% 0 5% 50%;
+}
+
+.centered-button{
+    margin: 13% 25% 0% 39%;
+    color: chartreuse;
+    background-color: purple;
 }

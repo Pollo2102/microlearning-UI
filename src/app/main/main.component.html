@@ -1,13 +1,60 @@
-<div [ngStyle]="{'height': '100%', 'width': '100%' , 'position': 'fixed'}">
+<div>
     
     <mat-toolbar class="toolbar-style" color="primary">
-        <mat-toolbar-row>
+        <mat-toolbar-row class="align-content">
             <span><mat-icon>info</mat-icon> Microlearning</span>
         </mat-toolbar-row>
     </mat-toolbar>
-    <div> 
-        <mat-card class='background-color'>
+     <div>
+         <mat-card class="background-color-style">
+            <mat-card class="form-style">
+                <mat-tab-group mat-align-tabs="center" class="inner-form">
+                    <mat-tab class="form-content" label="Subscribe"> 
+                        <div>
+                            <div class="p1">
+                        <mat-form-field class="long-form-field">
+                            <input matInput required [(ngModel)]="name" placeholder="Name" name="nameInput" id="nameInput" #nameInput="ngModel">
+                          </mat-form-field><br/>
+                          <mat-form-field class="long-form-field">
+                            <input matInput required [(ngModel)]="email" type="email" placeholder="E-mail" email id="emailInput" name="emailInput" #emailInput="ngModel">
+                        </mat-form-field><br/>
+                        <button (click)="subscribe()" mat-raised-button class="button-style" name="confirm1" [disabled]="!nameInput.valid || !emailInput.valid">Confirm</button>
+                        </div>
+                        <div class="p2">
+                            <mat-checkbox class="checkbox" [(ngModel)]="wiki">Wikipedia Page</mat-checkbox><br/>
+                            <mat-checkbox class="checkbox" [(ngModel)]="kanji">Kanji</mat-checkbox><br/>
+                            <mat-checkbox class="checkbox" [(ngModel)]="react">React Documentation Page</mat-checkbox><br/>
+                            <mat-checkbox class="checkbox" [(ngModel)]="cia">CIA World Factbook Page</mat-checkbox>
+                        </div><br/>
+                    </div>
+                    </mat-tab>
+                    <mat-tab label="Modify Subscription"> 
+                            <div>
+                                <div class="p1">
+                                  <mat-form-field class="long-form-field">
+                                    <input matInput required [(ngModel)]="email2" type="email" placeholder="E-mail" email id="emailInput2" name="emailInput2" #emailInput2="ngModel">
+                                </mat-form-field><br/>
+                                <button (click)="modifySub()" mat-raised-button class="button-style" name="confirm2" [disabled]="!emailInput2.valid">Confirm</button>
+                                </div>
+                                <div class="p2">
+                                    <mat-checkbox class="checkbox" [(ngModel)]="wiki2">Wikipedia Page</mat-checkbox><br/>
+                                    <mat-checkbox class="checkbox" [(ngModel)]="kanji2">Kanji</mat-checkbox><br/>
+                                    <mat-checkbox class="checkbox" [(ngModel)]="react2">React Documentation Page</mat-checkbox><br/>
+                                    <mat-checkbox class="checkbox" [(ngModel)]="cia2">CIA World Factbook Page</mat-checkbox>
+                                </div><br/>
+                            </div> 
+                    </mat-tab>
+                    <mat-tab label="Unsubscribe"> 
+                            <div class="p3">
+                                    <mat-form-field [ngStyle]="{'margin-left': '20%', 'margin-top': '0%'}" class="long-form-field">
+                                      <input matInput required [(ngModel)]="email3" type="email" placeholder="E-mail" email id="emailInput3" name="emailInput3" #emailInput3="ngModel">
+                                  </mat-form-field><br/>
+                                  <button (click)="deleteSub()" mat-raised-button class="centered-button" name="confirm3" [disabled]="!emailInput3.valid">Confirm</button>
+                                  </div>
+                    </mat-tab>
+                </mat-tab-group>
+            </mat-card>
+         </mat-card>
+     </div>
 
-        </mat-card>
-    </div>
 </div>
