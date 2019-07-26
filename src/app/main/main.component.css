@@ -17,8 +17,8 @@
     background-color: rgb(5, 130, 189);
     margin: 17% 0%;
     position: fixed;
-    width: 70%;
-    height: 68%;
+    width: 60%;
+    height: 60%;
 }
 
 .inner-form{
@@ -43,4 +43,14 @@
     border-radius: 5px;
     padding: 3px 6px 3px 6px;
     margin: 10px 0px;
+}
+
+.p1{
+    float: left; 
+}
+
+.p2{
+    float: right;
+    margin-right: 2em;
+    margin-top: 2em;
 }
