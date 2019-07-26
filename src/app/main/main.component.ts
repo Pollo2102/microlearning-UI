@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../models/User';
+import { MainService } from '../main.service';
 
 
 @Component({
@@ -9,6 +10,8 @@ import { User } from '../models/User';
   styleUrls: ['./main.component.css']
 })
 export class MainComponent implements OnInit {
+
+  constructor(private mainService: MainService) { }
 
   user: User = new User();
 
@@ -45,6 +48,8 @@ export class MainComponent implements OnInit {
       this.user.subscriptions += 'W';
 
     // POST request
+    this.mainService.saveUser(this.user)
+    .subscribe(res => console.log(res));
   };
 
   modifySub = () => {
@@ -61,16 +66,14 @@ export class MainComponent implements OnInit {
       this.user.subscriptions += 'W';
 
     // PUT request
+    this.mainService.editUser(this.user)
+    .subscribe(res => console.log(res));
   };
 
   deleteSub = () => {
-    this.user = new User();
-    this.user.email = this.email3;
-
     // DELETE request
+    this.mainService.deleteUser(this.email3)
   };
-
-  constructor() { }
 
   ngOnInit() {
   }

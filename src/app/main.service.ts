@@ -19,7 +19,7 @@ export class MainService {
     return this.http.put(`${this.API_LINK}/users/${user.email}`, user);
   };
 
-  deleteUser(user: User) {
-    return this.http.delete(`${this.API_LINK}/users/${user.email}`);
+  deleteUser(email: string) {
+    return this.http.delete(`${this.API_LINK}/users/${email}`);
   };
 }
