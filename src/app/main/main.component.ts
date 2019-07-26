@@ -13,10 +13,23 @@ export class MainComponent implements OnInit {
   kanji: boolean;
   cia: boolean;
 
+  // POST
   email: string;
   name: string;
+  subscriptions: string;
 
-  
+  wiki2: boolean;
+  react2: boolean;
+  kanji2: boolean;
+  cia2: boolean;
+
+  // PUT
+  email2: string;
+  subscriptions2: string;
+
+  // DELETE
+  email3: string;
+
 
   constructor() { }
 

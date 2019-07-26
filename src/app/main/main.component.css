@@ -57,6 +57,10 @@
     margin-top: 2em;
 }
 
+.p3{
+    padding: 6% 20%;
+}
+
 .ng-invalid:not(form) {
     text-emphasis-color: red;
 }
@@ -65,4 +69,10 @@
     color: chartreuse;
     background-color: purple;
     margin: 10% 0 5% 50%;
+}
+
+.centered-button{
+    margin: 13% 25% 0% 39%;
+    color: chartreuse;
+    background-color: purple;
 }
