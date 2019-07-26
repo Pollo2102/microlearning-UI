@@ -9,9 +9,28 @@
          <mat-card class="background-color-style">
             <mat-card class="form-style">
                 <mat-tab-group class="inner-form">
-                    <mat-tab class="form-content" label="Subscribe"> Content 1 </mat-tab>
-                    <mat-tab label="Modify Subscription"> Content 2  </mat-tab>
-                    <mat-tab label="Unsubscribe"> Content 3 </mat-tab>
+                    <mat-tab class="form-content" label="Subscribe"> 
+                            <div>
+                        <mat-form-field class="long-form-field">
+                            <input matInput required placeholder="Name" name="name">
+                          </mat-form-field><br/>
+                          <mat-form-field class="long-form-field">
+                            <input matInput required type="email" placeholder="E-mail" name="email">
+                          </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-checkbox class="checkbox" [(ngModel)]="wiki">Wikipedia Page</mat-checkbox><br/>
+                            <mat-checkbox class="checkbox" [(ngModel)]="kanji">Kanji</mat-checkbox><br/>
+                            <mat-checkbox class="checkbox" [(ngModel)]="react">React Documentation Page</mat-checkbox><br/>
+                            <mat-checkbox class="checkbox" [(ngModel)]="cia">CIA World Factbook Page</mat-checkbox>
+                        </div>
+                    </mat-tab>
+                    <mat-tab label="Modify Subscription"> 
+                        Content 2  
+                    </mat-tab>
+                    <mat-tab label="Unsubscribe"> 
+                        Content 3 
+                    </mat-tab>
                 </mat-tab-group>
             </mat-card>
          </mat-card>

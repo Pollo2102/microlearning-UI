@@ -8,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
+  wiki: boolean;
+  react: boolean;
+  kanji: boolean;
+  cia: boolean;
+
   constructor() { }
 
   ngOnInit() {

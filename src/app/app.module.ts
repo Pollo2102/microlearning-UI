@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms'
 
 import { MatCheckboxModule, MatFormFieldModule, MatInputModule, MatToolbarModule, MatStepperModule, MatTabsModule, MatButtonModule, MatIconModule, MatCardModule} from '@angular/material';
 
@@ -17,6 +18,7 @@ import { MainComponent } from './main/main.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
     MatCheckboxModule,
     MatFormFieldModule,
     MatInputModule,

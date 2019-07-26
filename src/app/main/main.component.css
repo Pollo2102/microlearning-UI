@@ -9,7 +9,7 @@
     height: 100%;
     width: 100%;
     position: fixed;
-    padding: 8% 25%;
+    padding: 5% 20% 23% 20%;
 }
 
 .form-style{
@@ -17,8 +17,8 @@
     background-color: rgb(5, 130, 189);
     margin: 17% 0%;
     position: fixed;
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 68%;
 }
 
 .inner-form{
@@ -29,4 +29,18 @@
 .form-content{
     background-color: aqua;
     color: aqua;
+}
+
+.long-form-field {
+    text-align: left;
+    margin: 0px 20px 0px 20px;
+    width: 13em;
+}
+
+.checkbox{
+    color: darkorange   ;
+    background-color: purple;
+    border-radius: 5px;
+    padding: 3px 6px 3px 6px;
+    margin: 10px 0px;
 }
