@@ -10,20 +10,23 @@
             <mat-card class="form-style">
                 <mat-tab-group class="inner-form">
                     <mat-tab class="form-content" label="Subscribe"> 
+                        <div>
                             <div class="p1">
                         <mat-form-field class="long-form-field">
-                            <input matInput required placeholder="Name" name="name">
+                            <input matInput required [(ngModel)]="name" placeholder="Name" name="nameInput" id="nameInput" #nameInput="ngModel">
                           </mat-form-field><br/>
                           <mat-form-field class="long-form-field">
-                            <input matInput required type="email" placeholder="E-mail" name="email">
-                          </mat-form-field>
+                            <input matInput required [(ngModel)]="email" type="email" placeholder="E-mail" email id="emailInput" name="emailInput" #emailInput="ngModel">
+                        </mat-form-field><br/>
+                        <button mat-raised-button class="button-style" name="confirm1" [disabled]="!nameInput.valid || !emailInput.valid">Confirm</button>
                         </div>
                         <div class="p2">
                             <mat-checkbox class="checkbox" [(ngModel)]="wiki">Wikipedia Page</mat-checkbox><br/>
                             <mat-checkbox class="checkbox" [(ngModel)]="kanji">Kanji</mat-checkbox><br/>
                             <mat-checkbox class="checkbox" [(ngModel)]="react">React Documentation Page</mat-checkbox><br/>
                             <mat-checkbox class="checkbox" [(ngModel)]="cia">CIA World Factbook Page</mat-checkbox>
-                        </div>
+                        </div><br/>
+                    </div>
                     </mat-tab>
                     <mat-tab label="Modify Subscription"> 
                         Content 2  

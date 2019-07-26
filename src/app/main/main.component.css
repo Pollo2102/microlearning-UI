@@ -33,7 +33,7 @@
 
 .long-form-field {
     text-align: left;
-    margin: 0px 20px 0px 20px;
+    margin: 0px 20px 0px 40px;
     width: 13em;
 }
 
@@ -46,11 +46,23 @@
 }
 
 .p1{
+    padding-top: 5%;
     float: left; 
 }
 
 .p2{
+    padding-top: 5%;
     float: right;
     margin-right: 2em;
     margin-top: 2em;
+}
+
+.ng-invalid:not(form) {
+    text-emphasis-color: red;
+}
+
+.button-style{
+    color: chartreuse;
+    background-color: purple;
+    margin: 10% 0 5% 50%;
 }

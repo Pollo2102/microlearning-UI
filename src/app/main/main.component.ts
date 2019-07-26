@@ -13,6 +13,11 @@ export class MainComponent implements OnInit {
   kanji: boolean;
   cia: boolean;
 
+  email: string;
+  name: string;
+
+  
+
   constructor() { }
 
   ngOnInit() {
