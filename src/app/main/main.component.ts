@@ -15,19 +15,19 @@ export class MainComponent implements OnInit {
 
   user: User = new User();
 
-  cia: boolean;
-  kanji: boolean;
-  react: boolean;
-  wiki: boolean;
+  cia: boolean = false;
+  kanji: boolean = false;
+  react: boolean = false;
+  wiki: boolean = false;
 
   // POST
   name: string;
   email: string;
 
-  cia2: boolean;
-  kanji2: boolean;
-  react2: boolean;
-  wiki2: boolean;
+  cia2: boolean = false;
+  kanji2: boolean = false;
+  react2: boolean = false;
+  wiki2: boolean = false;
 
   // PUT
   email2: string;
@@ -36,8 +36,10 @@ export class MainComponent implements OnInit {
   email3: string;
 
   subscribe = () => {
+    this.user = new User();
     this.user.fullname = this.name;
     this.user.email = this.email;
+    this.user.subscriptions = '';
     if (this.cia)
       this.user.subscriptions += 'C';
     if (this.kanji)
@@ -46,6 +48,8 @@ export class MainComponent implements OnInit {
       this.user.subscriptions += 'R';
     if (this.wiki)
       this.user.subscriptions += 'W';
+
+      console.log(this.user.subscriptions);
 
     // POST request
     this.mainService.saveUser(this.user)
@@ -56,6 +60,7 @@ export class MainComponent implements OnInit {
     this.user = new User();
     this.user.fullname = '';
     this.user.email = this.email2;
+    this.user.subscriptions = '';
     if (this.cia2)
       this.user.subscriptions += 'C';
     if (this.kanji2)
@@ -72,7 +77,7 @@ export class MainComponent implements OnInit {
 
   deleteSub = () => {
     // DELETE request
-    this.mainService.deleteUser(this.email3)
+    this.mainService.deleteUser(this.email3).subscribe();
   };
 
   ngOnInit() {
